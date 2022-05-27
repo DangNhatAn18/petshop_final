@@ -9,13 +9,12 @@ import EditProduct from './components/product/EditProduct';
 import Category from './components/category/Category';
 import AddCategory from './components/category/AddCategory';
 import EditCategory from './components/category/EditCategory';
-import User from './components/user/User';
 import AddUser from './components/user/AddUser';
 import EditUser from './components/user/EditUser';
+import UserList from './components/user/UserList';
 
 
 function App() {
- 
   return (  
 
 <div className='app'>
@@ -65,7 +64,7 @@ function App() {
         </li>
         <li className="sidebar-submenu">
             <a href="#" className="sidebar-menu-dropdown">
-            <i class='bx bx-user'></i>
+            <i className='bx bx-user'></i>
                 <span>TÀI KHOẢN</span>
                 <div className="dropdown-icon"></div>
             </a>
@@ -131,7 +130,7 @@ function App() {
  <Route path='/category' element={<Category/>}/>
  <Route path='/addCategory' element={<AddCategory/>}/>
  <Route path='/editCategory/:id' element={<EditCategory/>}/>
- <Route path='/user' element={<User/>}/>
+ <Route path='/user' element={<UserList/>}/>
  <Route path='/addUser' element={<AddUser/>}/>
  <Route path='/editUser/:id' element={<EditUser/>}/>
 </Routes>

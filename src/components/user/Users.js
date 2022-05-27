@@ -3,16 +3,15 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const Products = ({ products, loading }) => {
-
-    const [searchPro, setSearchPro] = useState("")
+const Users = ({ users, loading }) => {
+    const [searchUs, setSearchUs] = useState("")
     if (loading) {
         return (
             <h2>LOADING..</h2>
         )
     }
-    function deletepro(id) {
-        axios.delete(`https://62811baf1020d8520585969c.mockapi.io/api/v1/products/${id}`)
+    function deleteus(id) {
+        axios.delete(`https://62811baf1020d8520585969c.mockapi.io/api/v1/users/${id}`)
             .then(res => {
                 window.location.reload(true);
             })
@@ -25,7 +24,7 @@ const Products = ({ products, loading }) => {
 
                     <th colspan={3}> <form id="tim">
                         <i class="bx bx-search icon"></i>
-                        <input className='input-field' type="text" name="search" placeholder="Tìm kiếm..." onChange={(event) => { setSearchPro(event.target.value) }} />
+                        <input className='input-field' type="text" name="search" placeholder="Tìm kiếm..." onChange={(event) => { setSearchUs(event.target.value) }} />
                     </form></th>
                     <th ></th>
                     <th></th>
@@ -34,76 +33,64 @@ const Products = ({ products, loading }) => {
 
                 </tr>
             </thead>
-
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Hình ảnh </th>
-                    <th>Tên thú cưng</th>
-                    <th>Loại</th>
+                    <th>Tên</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
                     <th>Trạng Thái</th>
-                    <th>Giá</th>
-                    <th>Hành động</th>
-
+                    <th>Hành Động</th>
                 </tr>
             </thead>
             <tbody>
 
 
-                {products.filter((pro) => {
-                    if (searchPro == "") {
-                        return pro
-                    } else if (pro.name.toLowerCase().includes(searchPro.toLowerCase())) {
-                        return pro
+                {users.filter((us) => {
+                    if (searchUs == "") {
+                        return us
+                    } else if (us.name.toLowerCase().includes(searchUs.toLowerCase())) {
+                        return us
                     }
-                }).map((pro, index) => {
+                }).map((us, index) => {
                     return (
                         <tr key={index}>
-                            <td >{pro.id}</td>
+                            <td >{us.id}</td>
                             <td>
-                                <div className="order-owner">
-                                    <img src={pro.imageUrl} alt="user image" />
-
-                                    <span></span>
-                                </div>
+                                <span>{us.name}</span>
                             </td>
                             <td>
-                                <span>{pro.name}</span>
+                                <span>{us.phone}</span>
                             </td>
-                            <td>{pro.breed}</td>
-
+                            <td>{us.address}</td>
                             <td>
-                                <span className={pro.status === "Còn hàng" ? 'order-status order-ready' :
-                                    'order-status order-shipped'}> {pro.status === "Còn hàng" ? 'Còn hàng' : 'Hết hàng'}</span>
+                                <span className={us.status === "Kích hoạt" ? 'order-status order-ready' :
+                                    'order-status order-shipped'}> {us.status === "Kích hoạt" ? 'Kích hoạt' : 'Ẩn'}</span>
                             </td>
-
-                            <td>{pro.price}</td>
                             <td>
                                 <div className="manage">
 
-                                    <Link to={`/editProduct/${pro.id}`}><i className='bx bx-edit bx-md'></i></Link>
+                                    <Link to={`/editUser/${us.id}`}><i className='bx bx-edit bx-md'></i></Link>
                                     <button
                                         className="delete button"
                                         onClick={() => {
                                             const confirmBox = window.confirm(
-                                                "Ban co muon xoa san pham nay?"
+                                                "Ban co muon xoa khach hang nay?"
                                             )
                                             if (confirmBox === true) {
-                                                deletepro(pro.id)
+                                                deleteus(us.id)
                                             }
                                         }}><i className='bx bx-trash bx-md'></i>
                                     </button>
                                 </div>
                             </td>
                         </tr>
-
                     )
 
                 })}
             </tbody>
         </>
-
     );
 };
 
-export default Products;
+export default Users;

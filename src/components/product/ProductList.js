@@ -7,7 +7,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(4);
+  const [productsPerPage] = useState(7);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -33,37 +33,25 @@ const ProductList = () => {
 
   return (
     <div className="main">
-      <div className="main-header">
-        <div className="mobile-toggle" id="mobile-toggle">
-          <i className="bx bx-menu-alt-right"></i>
-        </div>
-        <div className="main-title">Quản lí thú cưng</div>
+    <div className="main-header">
+      <div className="mobile-toggle" id="mobile-toggle">
+        <i className="bx bx-menu-alt-right"></i>
       </div>
-      <div className="main-content">
-        <div className="row">
-          <div className="col-12">
-            <div className="box">
-              <div className="box-header" id="add">
-                <a href="/addProduct">
-                  <i className="bx bx-add-to-queue bx-sm"></i> Thêm thú cưng
-                </a>
-              </div>
-             
-              <div className="box-body overflow-scroll">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Hình ảnh </th>
-                      <th>Tên thú cưng</th>
-                      <th>Loại</th>
-                      <th>Trạng Thái</th>
-
-                      <th>Giá</th>
-                      <th>Hành động</th>
-                    </tr>
-                  </thead>
-                  <Products products={currentProducts} loading={loading} />
+      <div className="main-title">Quản lí thú cưng</div>
+    </div>
+    <div className="main-content">
+      <div className="row">
+        <div className="col-12">
+          <div className="box">
+            <div className="box-header" id="add">
+              <a href="/addProduct">
+                <i className="bx bx-add-to-queue bx-sm"></i> Thêm thú cưng
+              </a>
+            </div>
+            <div className="box-body overflow-scroll">
+              <table>
+                
+                <Products products={currentProducts} loading={loading} />
                 </table>
                
               </div>
@@ -73,6 +61,7 @@ const ProductList = () => {
                   productsPerPage={productsPerPage}
                   totalProducts={products.length}
                   paginate={paginate}
+                  currentPage={currentPage}
                 />
           </div>
         </div>

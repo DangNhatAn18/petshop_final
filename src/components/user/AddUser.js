@@ -17,7 +17,7 @@ const AddUser = () => {
             navigate("/user")
         )
     }
-
+    
     return (
         <>
             <div className="main">
@@ -29,12 +29,12 @@ const AddUser = () => {
                         -Quản lí khách hàng - Thêm người dùng
                     </div>
                 </div>
-                    <div className="page-body">
-                        <div className="row">
-                            <div className="col-sm-12">
+                <div className="page-body">
+                    <div className="row">
+                        <div className="col-sm-12">
                             <div className="main-content">
-                            <div className="box">
-                <div className="box-header">
+                                <div className="box">
+                                    <div className="box-header">
                                         <form>
                                             <div className="form-group row">
                                                 <label className="col-sm-2 col-form-label">Tên khách hàng</label>
@@ -59,18 +59,18 @@ const AddUser = () => {
                                                 </div>
                                             </div>
                                             <div className="form-group row">
-                                        <label className="col-sm-2 col-form-label" >Trạng thái</label>
-                                        <div className="col-sm-10">
-                                            <select name="select" className="form-control" onChange={(e) => setData({ ...data, status: e.target.value })}>
-                                                <option value="opt1">Chọn trạng thái</option>
-                                                <option value="Kích hoạt">Kích hoạt</option>
-                                                <option value="Ẩn ">Ẩn</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                                <label className="col-sm-2 col-form-label" >Trạng thái</label>
+                                                <div className="col-sm-10">
+                                                    <select name="select" className="form-control" onChange={(e) => setData({ ...data, status: e.target.value })}>
+                                                        <option value="opt1">Chọn trạng thái</option>
+                                                        <option value="Kích hoạt">Kích hoạt</option>
+                                                        <option value="Ẩn ">Ẩn</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div className="form-group row">
-                                            <div className="col-sm-10">
-                                                <input onClick={Submit} type='submit' value="Thêm người dùng" />
+                                                <div className="col-sm-10">
+                                                    <input onClick={Submit} type='submit' value="Thêm người dùng" />
                                                 </div>
                                             </div>
                                         </form>

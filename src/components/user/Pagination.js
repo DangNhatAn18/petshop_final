@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) => {
+const Pagination = ({ currentPage, usersPerPage, totalUsers, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -15,7 +15,7 @@ const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) =
     <div className="pagi">
       <ul className='pagination'>
         <li className="page-item">
-        <a className="page-link" to={currentPage - 1} onClick={() => paginate(currentPage => currentPage <= 1 ? currentPage : currentPage - 1)} aria-label="Previous">
+          <a className="page-link" to={currentPage - 1} onClick={() => paginate(currentPage => currentPage <= 1 ? currentPage : currentPage - 1)} aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only"></span>
           </a>
@@ -30,13 +30,12 @@ const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) =
         ))}
 
         <li className="page-item">
-        <a className="page-link" to={currentPage + 1} onClick={() => paginate(currentPage => currentPage >= pageNumbers.length? currentPage : currentPage + 1)} aria-label="Next">
+          <a className="page-link" to={currentPage + 1} onClick={() => paginate(currentPage => currentPage >= pageNumbers.length? currentPage : currentPage + 1)} aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only"></span>
           </a>
         </li>
       </ul>
-
     </div>
   );
 };

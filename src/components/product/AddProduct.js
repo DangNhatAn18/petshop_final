@@ -9,7 +9,8 @@ function AddProduct() {
         breed: "",
         price: 0,
         description: "",
-        imageUrl: ""
+        imageUrl: "",
+        status: ""
     });
 
 
@@ -67,6 +68,18 @@ function AddProduct() {
                                             </select>
                                         </div>
                                     </div>
+                                    <div className="form-group row">
+                                            <label className="col-sm-2 col-form-label">Trạng thái</label>
+                                            <div className="col-sm-10">
+                                                <select name="select" class="form-control"
+                                                    value={data.status}
+                                                    onChange={(e) => setData({ ...data, status: e.target.value })}>
+                                                    <option selected>Chọn trạng thái</option>
+                                                    <option value="Còn hàng">Còn hàng</option>
+                                                    <option value="Hết hàng">Hết hàng</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     <div className="form-group row">
                                         <label className="col-sm-2 col-form-label">Giá tiền</label>
                                         <div className="col-sm-10">

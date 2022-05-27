@@ -322,9 +322,7 @@ a {
   font-weight: 0;
 }
 
-.box-body {
-  padding: 20px 0;
-}
+
 
 .product-list {
   list-style-type: none;
@@ -537,9 +535,44 @@ table td {
 .box #add a:hover{
   color: #0652dd;
 }
-.pagi .pagination ul li{
-  list-style-type: none!important;
+
+.pagi {
+  text-align: center;
 }
-.pagination a{
+
+.pagi .pagination{
+  padding: 10px;
+  margin-left: -100px;
+}
+
+.pagi .pagination .page-item{
+  list-style-type: none!important;
+  display: inline-block;
+  background-color: rgba(62, 121, 247, 0.1); 
+}
+
+.pagination .page-item{
+  color: black;
+  text-decoration: none;
+  margin: 15px 3px;
+  border-radius: 20px;
+}
+
+.pagination .page-item a{
+  color: black;
+  border-radius: 20px;
+  padding: 10px 15px;
   cursor: pointer;
 }
+
+.pagination .page-item a.active {
+  background-color: #1873f1;
+  padding: 10px 15px;
+  color: white;
+}
+
+/* .pagination .page-item a:hover:not(.active)  {
+  color: white;
+  background-color: #1873f1;
+} */
+
