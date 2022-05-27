@@ -39,7 +39,7 @@ function EditUser() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    -Quản lí khách hàng - sửa người dùng
+                <i class='bx bx-chevron-right' ></i>Quản lí khách hàng<i class='bx bx-chevron-right' ></i>sửa người dùng
                 </div>
             </div>
             <div className="page-body">
@@ -89,7 +89,7 @@ function EditUser() {
                                                 </select>
                                             </div>
                                         </div>
-                                        <div className="form-group row" >
+                                        <div className="form-group row" id="nut">
                                             <div className="col-sm-10">
                                                 <input onClick={onSubmit} type='submit' value="Cập nhật" />
                                             </div>

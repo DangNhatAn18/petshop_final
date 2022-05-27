@@ -32,7 +32,7 @@ function AddProduct() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    -Quản lí thú cưng -Thêm mặt hàng
+                <i class='bx bx-chevron-right' ></i>Quản lí thú cưng<i class='bx bx-chevron-right' ></i>Thêm mặt hàng
                 </div>
             </div>
         <div className="page-body">
@@ -47,7 +47,7 @@ function AddProduct() {
                                 <form>
                                     <div className="form-group row">
                                         <label className="col-sm-2 col-form-label">Tên thú cưng</label>
-                                        <div className="col-sm-10">
+                                        <div className="col-sm-10" id="chs">
                                             <input value={data.name}
                                                 onChange={(e) => setData({ ...data, name: e.target.value })} type="text" className="form-control"
                                             placeholder="Nhập tên thú cưng"/>
@@ -55,7 +55,7 @@ function AddProduct() {
                                     </div>
                                     <div className="form-group row">
                                         <label className="col-sm-2 col-form-label" >Loại</label>
-                                        <div className="col-sm-10">
+                                        <div className="col-sm-10" id="chs">
                                             <select name="select" className="form-control" value={data.breed}
                                                 onChange={(e) => setData({ ...data, breed: e.target.value })}>
                                                 <option value="opt1">Chọn Loại</option>
@@ -70,7 +70,7 @@ function AddProduct() {
                                     </div>
                                     <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Trạng thái</label>
-                                            <div className="col-sm-10">
+                                            <div className="col-sm-10" id="chs">
                                                 <select name="select" class="form-control"
                                                     value={data.status}
                                                     onChange={(e) => setData({ ...data, status: e.target.value })}>
@@ -102,7 +102,7 @@ function AddProduct() {
                                                     placeholder="Ghi chú mô tả thú cưng" ></textarea>
                                           </div>
                                          </div>
-                                         <div className="form-group row" >
+                                         <div className="form-group row" id="nut">
                                          <div className="col-sm-10">
                                             <input onClick={Submit} type='submit' value="Thêm mặt hàng"/>
                                             </div>

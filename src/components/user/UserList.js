@@ -36,7 +36,7 @@ const UserList = () => {
                 <div className="mobile-toggle" id="mobile-toggle">
                     <i className="bx bx-menu-alt-right"></i>
                 </div>
-                <div className="main-title">Quản lí thú cưng</div>
+                <div className="main-title"><i class='bx bx-chevron-right' ></i>Quản lí người dùng</div>
             </div>
             <div className="main-content">
                 <div className="row">

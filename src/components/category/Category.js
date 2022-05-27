@@ -41,7 +41,7 @@ const Category = () => {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    Quản lí danh mục
+                <i class='bx bx-chevron-right' ></i>Quản lí danh mục
                 </div>
             </div>
             <div className="main-content">

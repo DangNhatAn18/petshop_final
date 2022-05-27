@@ -8,7 +8,7 @@ function Home() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    dashboard
+                <i class='bx bx-chevron-right' ></i>dashboard
                 </div>
             </div>
             <div className="main-content">

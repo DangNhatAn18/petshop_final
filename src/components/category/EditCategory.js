@@ -40,7 +40,7 @@ function EditCategory() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    -Quản lí danh mục -Cập nhật
+                <i class='bx bx-chevron-right' ></i>Quản lí danh mục<i class='bx bx-chevron-right' ></i>Cập nhật
                 </div>
             </div>
             <div className="page-body">
@@ -55,7 +55,7 @@ function EditCategory() {
                                     <form>
                                         <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Tên mới</label>
-                                            <div className="col-sm-10">
+                                            <div className="col-sm-10" id="chs">
                                                 <input value={data.name}
                                                     onChange={(e) => setData({ ...data, name: e.target.value })} type="text" className="form-control"
                                                     placeholder="Nhập tên thú cưng" />
@@ -63,14 +63,14 @@ function EditCategory() {
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Sửa ảnh</label>
-                                            <div className="col-sm-10">
+                                            <div className="col-sm-10" id="chs">
                                                 <input value={data.avt}
                                                     onChange={(e) => setData({ ...data, avt: e.target.value })} type="text" className="form-control" />
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                         <label className="col-sm-2 col-form-label" >Trạng thái</label>
-                                        <div className="col-sm-10">
+                                        <div className="col-sm-10" id="chs">
                                             <select name="select" className="form-control" onChange={(e) => setData({ ...data, status: e.target.value })}>
                                                 <option value="opt1">Chọn trạng thái</option>
                                                 <option value="Kích hoạt">Kích hoạt</option>
@@ -78,7 +78,7 @@ function EditCategory() {
                                             </select>
                                         </div>
                                     </div>
-                                        <div className="form-group row" >
+                                        <div className="form-group row" id="nut">
                                             <div className="col-sm-10">
                                                 <input onClick={onSubmit} type='submit' value="Cập nhật" />
                                             </div>

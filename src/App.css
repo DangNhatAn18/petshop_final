@@ -282,6 +282,7 @@ a {
 .main-title {
   text-transform: capitalize;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .main-content {
@@ -575,4 +576,21 @@ table td {
   color: white;
   background-color: #1873f1;
 } */
-
+#nut input {
+  border: 2px solid #1873f1;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--body-bg);
+  
+  font-size: 15px;
+}
+#nut input:hover{
+  background-color: #1873f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  color: white;
+}
+.box label{
+  font-size: 17px;
+  color: black;
+}

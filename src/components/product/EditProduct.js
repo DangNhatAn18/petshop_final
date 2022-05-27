@@ -42,7 +42,7 @@ function EditProduct() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                    -Quản lí thú cưng -Cập nhật
+                <i class='bx bx-chevron-right' ></i>Quản lí thú cưng<i class='bx bx-chevron-right' ></i>Cập nhật
                 </div>
             </div>
         <div className="page-body">
@@ -112,7 +112,7 @@ function EditProduct() {
                                                     placeholder="Ghi chú mô tả thú cưng" ></textarea>
                                           </div>
                                          </div>
-                                         <div className="form-group row" >
+                                         <div className="form-group row" id="nut">
                                          <div className="col-sm-10">
                                             <input onClick={onSubmit} type='submit' value="Cập nhật"/>
                                             </div>

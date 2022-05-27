@@ -26,7 +26,7 @@ const AddUser = () => {
                         <i className='bx bx-menu-alt-right'></i>
                     </div>
                     <div className="main-title">
-                        -Quản lí khách hàng - Thêm người dùng
+                    <i class='bx bx-chevron-right' ></i>Quản lí khách hàng<i class='bx bx-chevron-right' ></i>Thêm người dùng
                     </div>
                 </div>
                 <div className="page-body">
@@ -68,7 +68,7 @@ const AddUser = () => {
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div className="form-group row">
+                                            <div className="form-group row" id="nut">
                                                 <div className="col-sm-10">
                                                     <input onClick={Submit} type='submit' value="Thêm người dùng" />
                                                 </div>
