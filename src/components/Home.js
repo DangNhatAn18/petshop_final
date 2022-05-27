@@ -1,6 +1,7 @@
 import React from 'react'
-
+import Iframe from 'react-iframe'
 function Home() {
+    const key = 'AIzaSyCFn5m2oDIINUxQA0_aRu5WFv2LbrLW_oA'
     return (
         <div className="main">
             <div className="main-header">
@@ -8,7 +9,7 @@ function Home() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                <i class='bx bx-chevron-right' ></i>dashboard
+                    <i class='bx bx-chevron-right' ></i>dashboard
                 </div>
             </div>
             <div className="main-content">
@@ -215,7 +216,15 @@ function Home() {
                         </div>
 
                     </div>
-                    
+                    <div className="col-5 col-md-12 col-sm-12">
+
+                        <div className="box f-height">
+                            <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d599.7426438234426!2d107.58600258786872!3d16.45006810932365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1457de005d7%3A0x6608565df1f87298!2zMTc2IFRy4bqnbiBQaMO6LCBQaMaw4bubYyBWxKluaCwgVGjDoG5oIHBo4buRIEh14bq_LCBUaOG7q2EgVGhpw6puIEh14bq_IDUzMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1653644581447!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+
+                            />
+                        </div>
+
+                    </div>
                     <div className="col-12">
 
                         <div className="box">
