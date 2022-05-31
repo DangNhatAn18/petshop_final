@@ -39,7 +39,7 @@ function EditUser() {
                     <i className='bx bx-menu-alt-right'></i>
                 </div>
                 <div className="main-title">
-                <i class='bx bx-chevron-right' ></i>Quản lí khách hàng<i class='bx bx-chevron-right' ></i>sửa người dùng
+                <i class='bx bx-chevron-right' ></i>Quản lí khách hàng<i class='bx bx-chevron-right' ></i>Cập nhật thông tin
                 </div>
             </div>
             <div className="page-body">
